@@ -1,0 +1,16 @@
+@font-face {
+    font-family: ComicSansMS;
+    src: url(COMIC.TTF);
+}
+
+html {
+    font-family: ComicSansMS;
+}
+
+button {
+    font-family: ComicSansMS;
+}
+
+h1 {
+    text-align: center;
+}
