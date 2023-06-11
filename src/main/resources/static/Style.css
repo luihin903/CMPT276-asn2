@@ -3,12 +3,12 @@
     src: url(https://asn2-svq5.onrender.com/COMIC.TTF);
 }
 
-html, body, main, form, button {
+/* html, body, main, form, button {
     font-family: ComicSansMS;
     margin: auto;
-}
+} */
 
-div, span {
+div, span, button, a, form, html, input, header, main, footer, body {
     font-family: ComicSansMS;
 }
 
