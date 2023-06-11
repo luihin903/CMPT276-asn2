@@ -1,6 +1,6 @@
 @font-face {
     font-family: ComicSansMS;
-    src: url(https://asn2-svq5.onrender.com/COMIC.TTF);
+    src: url(COMIC.TTF);
 }
 
 html, body, main, form, button {
@@ -14,5 +14,4 @@ div, span {
 
 h1 {
     text-align: center;
-    font-family: ComicSansMS;
 }
