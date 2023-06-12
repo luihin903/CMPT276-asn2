@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "https://asn2-svq5.onrender.com/Style.css">
+    </head>
+    <body>
+
+        <header>
+            <a href = "https://asn2-svq5.onrender.com">
+                <h1 class = "center">STS</h1>
+            </a>
+        </header>
+
+        <div class = "container-fluid">
+            <div class = "row justify-content-center">
+                <div class = "col-md-4">
+                    <h1 class = "text-center mt-5 mb-4">New Student</h1>
+                    <form action = "/Student/edit/b" method = "post">
+                        <div th:each = "student:${st}">
+                            <input th:value = "${student.id}" type = "number" id = "id" name = "id" style = "position: absolute; visibility: hidden">
+                            <div class = "mb-3">
+                                <input th:value = "${student.name}" type = "text" id = "name" name = "name" class = "form-control form-control-lg" placeholder = "Name">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.number}" type = "number" id = "number" name = "number" class = "form-control form-control-lg" placeholder = "Student Number">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.height}" type = "number" step = "0.01" id = "height" name = "height" class = "form-control form-control-lg" placeholder = "Height (cm)">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.weight}" type = "number" step = "0.01" id = "weight" name = "weight" class = "form-control form-control-lg" placeholder = "Weight (kg)">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.color}" type = "color" id = "color" name = "color" class = "form-control form-control-lg" placeholder = "Hair Color">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.GPA}" type = "number" step = "0.01" id = "GPA" name = "GPA" class = "form-control form-control-lg" placeholder = "GPA">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.birth}" type = "date" id = "birth" name = "birth" class = "form-control form-control-lg" placeholder = "Date of Birth">
+                            </div>
+                            <div class = "mb-3">
+                                <input th:value = "${student.units}" type = "number" id = "units" name = "units" class = "form-control form-control-lg" placeholder = "Units Taken">
+                            </div>
+                        </div>
+                        
+                        <!-- Submit button -->
+
+                        <div class = "d-grid gap-2">
+                            <input class = "btn btn-primary" type = "submit" value = "EDIT"></input>
+                        </div>
+
+                    </form>
+
+                    <form action = "/Student/delete" method = "post">
+                        <div th:each = "student:${st}">
+                            <input type = "number" th:value = "${student.id}" style = "position: absolute; visibility: hidden" id = "id" name = "id">
+                            <input class = "btn btn-primary center" type = "submit" value = "DELETE" style = "background-color: red; color: white; text-align: center;"></input>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

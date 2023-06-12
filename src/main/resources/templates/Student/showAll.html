@@ -9,10 +9,18 @@
 
     </head>
     <body>
+        <header>
+            <a href = "https://asn2-svq5.onrender.com">
+                <h1 class = "center">STS</h1>
+            </a>
+        </header>
         <main>
             <h1>Students</h1>
-                <div th:each = "student:${st}">
-                    <div th:style = "'height: ' + ${student.height + 10} + 'px; width: ' + ${student.weight + 10} + 'px; border: 1px solid black; text-align: center; float: left; padding: 10px; margin: 10px'">
+            <div th:each = "student:${st}">
+                <form action = "edit/a" method = "get">
+                
+                    <input type = "number" name = "id" id = "id" th:value = "${student.id}" style = "position: absolute; visibility: hidden">
+                    <button type = "submit" th:style = "'height: ' + ${student.height + 10} + 'px; width: ' + ${student.weight + 10} + 'px; border: 1px solid black; text-align: center; float: left; padding: 10px; margin: 10px'">
                         <span th:text = "${student.name}" th:style = "'color: ' + ${student.color}"></span>
                         <br>
                         <span th:text = "${student.number}"></span>
@@ -22,8 +30,9 @@
                         <span th:text = "${student.birth}"></span>
                         <br>
                         <span th:text = "${student.units}"></span>
-                    </div>
-                </div>
+                    </button>
+                </form>
+            </div>
         </main>
     </body>
 </html>

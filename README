@@ -25,3 +25,15 @@ Features:
     2. Display students:
 
         https://asn2-svq5.onrender.com/Student/display
+
+    3. Edit students:
+
+        click on the rectangle at the display page
+
+    4. Delete students:
+
+        click on the delete button in the edit page
+    
+    5. Back to Home:
+
+        click on the STS at the top of each page to return to the home page
